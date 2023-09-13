@@ -41,21 +41,8 @@ def username(client):
     AB = 'QWERTYUIOPASDFGHJKLZXCVBNM'
     num = '1234567890'
     while True:
-        mm = str("".join(random.choice(AB) for i in range(1)))
-        nn = str("".join(random.choice(AB) for i in range(1)))
-        ww = str("".join(random.choice(num) for i in range(1)))
-        hh = str("".join(random.choice(AB) for i in range(1)))
-        c = (mm + "_" + mm + "_" +nn )
-        c1 = (mm +nn+ ww + ww + ww)
-        c2 = (mm + "_" + ww + "_" + ww)
-        c3 = (mm + "_" + nn + "_" + mm)
-        c4 = (mm + "_" + mm + "_" + mm)
-        c5 = (hh  + "_" + mm + "_" + mm)
-        c6 = (mm +ww + mm +ww + mm)
-        c7 = (mm  +mm + mm +ww + ww)
-        c8 = (mm +ww + mm +mm + mm )
-        user = (c,c1,c2,c3,c4,c5,c6,c7,c8)
-        username = str("".join(random.choice(user)))
+        for ac in open("u.txt").read().split("\n"):
+            username = str(ac)
         check(client, username)
 api_id = input('- Enter Api_Id : ')
 api_hash = input('- Enter Api_Hash : ')
