@@ -42,7 +42,8 @@ def username(client):
     num = '1234567890'
     while True:
         for ac in open("u.txt").read().split("\n"):
-            username = str(ac)
+		a=str(ac).replace("@","")
+                username = str(a)
         check(client, username)
 api_id = input('- Enter Api_Id : ')
 api_hash = input('- Enter Api_Hash : ')
