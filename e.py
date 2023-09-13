@@ -11,9 +11,9 @@ G= "\033[1;92m"
 chat_id = input('- Enter Id : ')
 token = input('- Enter Token : ')
 try:
-	bot = telebot.TeleBot(token)
+ bot = telebot.TeleBot(token)
 except:
-	exit('- Trun On Vpn / Error Token Bot')
+ exit('- Trun On Vpn / Error Token Bot')
 def check(client, username):
     global bot
     global chat_id
@@ -42,8 +42,8 @@ def username(client):
     num = '1234567890'
     while True:
         for ac in open("u.txt").read().split("\n"):
-		a=str(ac).replace("@","")
-		username = str(a)
+         a=str(ac).replace("@","")
+         username = str(a)
         check(client, username)
 api_id = input('- Enter Api_Id : ')
 api_hash = input('- Enter Api_Hash : ')
@@ -57,9 +57,9 @@ def main():
     session = session1()
     client = TelegramClient(StringSession(session), api_id, api_hash)
     try:
-    	client.start()
+     client.start()
     except:
-    	exit('- Error Api_Id , Api_Hash')
+     exit('- Error Api_Id , Api_Hash')
     client(JoinChannelRequest('@proxy_telegram13'))
     os.system('clear')
     username(client)
